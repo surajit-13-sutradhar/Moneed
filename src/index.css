@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+
+
+@layer base {
+  :root {
+    --bg-app: 243 244 246;
+    --bg-surface: 255 255 255;
+    --bg-surface-hover: 249 250 251;
+    --text-primary: 24 24 27;
+    --text-secondary: 113 113 122;
+    --color-brand: 0 82 255;
+    --color-success: 22 163 74;
+    --color-danger: 239 68 68;
+    --color-warning: 234 179 8;
+    --border-color: 228 228 231;
+    --sidebar-width: 260px;
+    --topbar-height: 64px;
+  }
+
+  .dark {
+    --bg-app: 9 9 11;
+    --bg-surface: 24 24 27;
+    --bg-surface-hover: 39 39 42;
+    --text-primary: 250 250 250;
+    --text-secondary: 161 161 170;
+    --color-brand: 59 130 246;
+    --color-success: 34 197 94;
+    --color-danger: 248 113 113;
+    --color-warning: 250 204 21;
+    --border-color: 39 39 42;
+  }
+
+  * {
+    transition-property: background-color, border-color;
+    transition-duration: 200ms;
+    transition-timing-function: ease;
+  }
+
+  body {
+    @apply bg-app text-primary antialiased;
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { @apply bg-border rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-secondary/40; }
+
+  /* Dropdown fade-in */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .animate-in {
+    animation: fadeIn 0.15s ease forwards;
+  }
+}
