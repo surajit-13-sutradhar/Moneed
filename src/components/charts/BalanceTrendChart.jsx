@@ -13,7 +13,7 @@ const CustomTooltip = ({ active, payload, label }) => {
           <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: p.color }} />
           <span className="text-secondary capitalize">{p.name}:</span>
           <span className="font-semibold text-primary">
-            ${p.value.toLocaleString('en-US', { minimumFractionDigits: 0 })}
+            ₹{p.value.toLocaleString('en-IN', { minimumFractionDigits: 0 })}
           </span>
         </div>
       ))}
@@ -35,11 +35,11 @@ export default function BalanceTrendChart({ data }) {
       <AreaChart data={data} margin={{ top: 8, right: 8, left: -16, bottom: 0 }}>
         <defs>
           <linearGradient id="gradIncome" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%"  stopColor="#16A34A" stopOpacity={0.15} />
+            <stop offset="5%" stopColor="#16A34A" stopOpacity={0.15} />
             <stop offset="95%" stopColor="#16A34A" stopOpacity={0} />
           </linearGradient>
           <linearGradient id="gradExpense" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%"  stopColor="#EF4444" stopOpacity={0.15} />
+            <stop offset="5%" stopColor="#EF4444" stopOpacity={0.15} />
             <stop offset="95%" stopColor="#EF4444" stopOpacity={0} />
           </linearGradient>
         </defs>
@@ -57,7 +57,7 @@ export default function BalanceTrendChart({ data }) {
           tick={{ fontSize: 12, fill: 'rgb(var(--text-secondary))', fontFamily: 'Outfit' }}
           axisLine={false}
           tickLine={false}
-          tickFormatter={v => `$${(v / 1000).toFixed(0)}k`}
+          tickFormatter={v => `₹${(v / 1000).toFixed(0)}k`}
         />
 
         <Tooltip content={<CustomTooltip />} />

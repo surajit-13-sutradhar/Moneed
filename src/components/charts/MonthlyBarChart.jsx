@@ -13,7 +13,7 @@ const CustomTooltip = ({ active, payload, label }) => {
           <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: p.color }} />
           <span className="text-secondary capitalize">{p.name}:</span>
           <span className="font-semibold text-primary">
-            ${p.value.toLocaleString('en-US', { minimumFractionDigits: 0 })}
+            ₹{p.value.toLocaleString('en-IN', { minimumFractionDigits: 0 })}
           </span>
         </div>
       ))}
@@ -45,7 +45,7 @@ export default function MonthlyBarChart({ data }) {
           tick={{ fontSize: 12, fill: 'rgb(var(--text-secondary))', fontFamily: 'Outfit' }}
           axisLine={false}
           tickLine={false}
-          tickFormatter={v => `$${(v / 1000).toFixed(0)}k`}
+          tickFormatter={v => `₹${(v / 1000).toFixed(0)}k`}
         />
         <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgb(var(--bg-surface-hover))' }} />
         <Legend

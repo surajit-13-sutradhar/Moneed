@@ -9,7 +9,7 @@ import {
   LogOut,
 } from 'lucide-react'
 
-const NAV = [
+export const NAV = [
   { to: '/dashboard',    label: 'Dashboard',    icon: LayoutDashboard },
   { to: '/transactions', label: 'Transactions', icon: ArrowLeftRight  },
   { to: '/analytics',    label: 'Analytics',    icon: BarChart2       },
@@ -21,7 +21,7 @@ export default function Sidebar() {
 
   return (
     <aside
-      className="fixed top-0 left-0 h-full bg-surface border-r border-border flex flex-col z-40"
+      className="fixed top-0 left-0 h-full bg-surface border-r border-border hidden md:flex flex-col z-40"
       style={{ width: 'var(--sidebar-width)' }}
     >
       {/* ── Logo ─────────────────────────────────────────── */}

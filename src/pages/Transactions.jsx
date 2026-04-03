@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { Plus, Download, FileJson } from 'lucide-react'
 import { useApp } from '../context/AppContext'
 import { getFilteredTransactions, exportToCSV, exportToJSON } from '../utils/aggregations'
+import { formatCurrency } from '../utils/formatters'
 import SectionHeader        from '../components/ui/SectionHeader'
 import TransactionFilters   from '../components/transactions/TransactionFilters'
 import TransactionRow       from '../components/transactions/TransactionRow'
@@ -124,11 +125,11 @@ export default function Transactions() {
               {filtered.length} transaction{filtered.length !== 1 ? 's' : ''} ·{' '}
               Total expenses:{' '}
               <span className="font-medium text-danger">
-                ${filtered.filter(t => t.type === 'expense').reduce((s, t) => s + t.amount, 0).toLocaleString('en-US', { minimumFractionDigits: 2 })}
+                {formatCurrency(filtered.filter(t => t.type === 'expense').reduce((s, t) => s + t.amount, 0))}
               </span>
               {' '}· Total income:{' '}
               <span className="font-medium text-success">
-                ${filtered.filter(t => t.type === 'income').reduce((s, t) => s + t.amount, 0).toLocaleString('en-US', { minimumFractionDigits: 2 })}
+                {formatCurrency(filtered.filter(t => t.type === 'income').reduce((s, t) => s + t.amount, 0))}
               </span>
             </p>
           </div>
