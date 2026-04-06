@@ -9,7 +9,7 @@
 <!-- ![Moneed Dashboard Overview](./docs/images/dashboard-overview.png) -->
 
 ```
-![Dashboard Overview](./public/Dashboard-Light.png)
+![Dashboard Overview](public/Dashboard-Dark.png)
 ```
 
 ---
