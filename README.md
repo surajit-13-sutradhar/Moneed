@@ -9,7 +9,7 @@
 <!-- ![Moneed Dashboard Overview](./docs/images/dashboard-overview.png) -->
 
 
-![Dashboard Overview]([public/Dashboard-Dark.png](https://github.com/surajit-13-sutradhar/Moneed/blob/8a358aaafc54ddf2b39865fe7ff7f993f4445f64/Dashboard-Dark.png))
+![Dashboard Overview](https://github.com/surajit-13-sutradhar/Moneed/blob/8a358aaafc54ddf2b39865fe7ff7f993f4445f64/Dashboard-Dark.png)
 
 
 ---
