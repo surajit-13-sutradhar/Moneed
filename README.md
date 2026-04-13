@@ -450,11 +450,3 @@ Given more time or a production context, the following would be natural next ste
 - **Unit and integration tests** — Jest + React Testing Library coverage for aggregation utilities and key components
 
 ---
-
-## License
-
-This project was built as a frontend evaluation assignment. All code is original work by the author, developed with AI assistance as documented above.
-
----
-
-<p align="center">Built with React + Tailwind · Designed with intention · Powered by Outfit</p>
