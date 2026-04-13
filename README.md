@@ -81,10 +81,7 @@ Before any application code, a standalone HTML design system test page was built
 
 ---
 
-<!-- DESIGN SYSTEM SCREENSHOT -->
-```
-[INSERT SCREENSHOT — Design system test page showing tokens, buttons, badges]
-```
+
 
 ---
 
@@ -360,40 +357,6 @@ Statuses include `completed`, `pending`, and `failed` to exercise all badge stat
 | `exportToJSON(txns)` | Triggers browser download of `.json` file |
 
 All aggregations are wrapped in `useMemo` in the page components so they only recompute when `transactions` changes.
-
----
-
-## Screenshots
-
-```
-[INSERT SCREENSHOT — Dashboard light mode, desktop]
-```
-
-```
-[INSERT SCREENSHOT — Dashboard dark mode, desktop]
-```
-
-```
-[INSERT SCREENSHOT — Transactions page with filters active]
-```
-
-```
-[INSERT SCREENSHOT — Add transaction modal (admin role)]
-```
-
-```
-[INSERT SCREENSHOT — Analytics page]
-```
-
-```
-[INSERT SCREENSHOT — Mobile view — sidebar drawer open]
-```
-
-```
-[INSERT SCREENSHOT — Settings page]
-```
-
----
 
 ## Design System
 
